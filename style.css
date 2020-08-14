@@ -1,0 +1,14 @@
+h3{
+    color: crimson;
+}
+h1{
+    color: darkslategray;
+}
+img{
+    width: 50%;
+    height: 20%;
+}
+figcaption{
+    font-size: 12px;
+    color: darkcyan;
+}

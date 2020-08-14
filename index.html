@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun With API</title>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Some Refreshment Tips for you!</h3>
+    <h1 id = "activity">Take a Meditation Class</h1>
+    <!--<h3>Learn from: <a id ="explore-link" href="">Visit this Place</a></h3>-->
+
+    <img src="images/juice.jpg" alt="">
+    <figcaption> # Favourite Juice  </figcaption>
+    <script>
+       function doSomething(){
+            fetch('http://www.boredapi.com/api/activity/')
+            .then(res => res.json())
+            .then(data =>  {
+                document.getElementById("activity").innerText = data.activity
+            });
+       }
+       doSomething();
+       setInterval(() => {
+            doSomething();
+       }, 50000);
+    </script>
+</body>
+</html>
